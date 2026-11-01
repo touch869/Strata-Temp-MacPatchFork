@@ -2,7 +2,7 @@
 # strata Q2_0 服务启停脚本（去审查版默认；官方版把 CONFIG 换成 strata-q2_0.json）
 # 用法: ./strata.sh start | stop | restart | status
 
-DIR="/Users/cafedead/workspace/flashnext-bench/01-strata-iq3xxs/code/Strata-Temp-MacPatchFork"
+DIR="$(cd "$(dirname "$0")" && pwd)"
 CONFIG="strata-abl-q2_0.json"      # 官方版: strata-q2_0.json
 PORT=8080
 
