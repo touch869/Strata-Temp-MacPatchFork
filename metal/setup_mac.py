@@ -50,12 +50,16 @@ MAC_MODELS = {
     # dense tensors into one GGUF for the GPU (metal/tools/metal_repack.py); shard1_gb is that file, the n-gram
     # table stays in its shard on the SSD
     "UD-Q4_K_XL": {"shard1_gb": 82.6, "tested": True, "family": "unsloth", "shards": 4},
+    "UD-IQ4_XS": {"shard1_gb": 74.0, "tested": False, "family": "unsloth", "shards": 3},
     "UD-Q5_K_XL": {"shard1_gb": 103.9, "tested": True, "family": "unsloth", "shards": 6},
     "UD-Q6_K_XL": {"shard1_gb": 114.8, "tested": True, "family": "unsloth", "shards": 6},
 }
 # the Unsloth files at setup.py's pinned revision: name -> (bytes, SHA-256), the Hub's LFS pointers (UD-Q4_K_XL's
 # are setup.py's UNSLOTH_SHARDS)
 UD_SHARDS = {
+    "Qwen3.8-Flash-Next-UD-IQ4_XS-00001-of-00003.gguf": (10946624, "5ce89370720f8bf90890f439361282104c1aa1482d4013bb9a50923e758e71a4"),
+    "Qwen3.8-Flash-Next-UD-IQ4_XS-00002-of-00003.gguf": (49835229856, "577a38a2392b40ca2193cea502e1d92f60b8cd370675d308e0ec21885d9daaa7"),
+    "Qwen3.8-Flash-Next-UD-IQ4_XS-00003-of-00003.gguf": (43836407744, "d4634e6d84f0ebb0940be15c90d3790bf6464e3dea3a1cddc567dc0e83ad8833"),
     "Qwen3.8-Flash-Next-UD-Q5_K_XL-00001-of-00006.gguf": (10946618, "610922cdb1afe1094e95d7a3e86b12ee33317ebbf7320ac9344e21b6ae4bb69f"),
     "Qwen3.8-Flash-Next-UD-Q5_K_XL-00002-of-00006.gguf": (682434912, "494ca4ed3dbf97bc28da88af3890b8877b9032f909812d00c0526a9ca5e91d2e"),
     "Qwen3.8-Flash-Next-UD-Q5_K_XL-00003-of-00006.gguf": (54400261312, "34efd79a80a1ce540a517a5d56171924b66ce1c38b04c904f17ad6d8ef17cf20"),
